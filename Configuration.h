@@ -59,7 +59,7 @@
 #endif
 
 // Define this to set a custom name for your generic Mendel,
-#define CUSTOM_MENDEL_NAME "Kossel RC1.04"
+#define CUSTOM_MENDEL_NAME __TIME__
 
 // This defines the number of extruders
 #define EXTRUDERS 1
@@ -105,8 +105,8 @@
 //#define DEBUG_MESSAGES
 
 // Precision for G30 delta autocalibration function
-//#define AUTOCALIBRATION_PRECISION 0.03 // mm
-#define AUTOCALIBRATION_PRECISION 0.06 // mm //do this first for quick test. If ok, change to 0.03 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#define AUTOCALIBRATION_PRECISION 0.03 // mm
+//#define AUTOCALIBRATION_PRECISION 0.06 // mm //do this first for quick test. If ok, change to 0.03 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.
 #define BED_DIAMETER 240 // mm, MR changed from 170
 
@@ -377,7 +377,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_Y_HOME_POS 0
 //CALIB
 //#define MANUAL_Z_HOME_POS 280  // Start Calibration For delta: Distance between nozzle and print surface after homing.
-#define MANUAL_Z_HOME_POS 440.0  // For delta: Distance between nozzle and print surface after homing. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#define MANUAL_Z_HOME_POS 384.5  // For delta: Distance between nozzle and print surface after homing. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
@@ -391,7 +391,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 //#define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}    // (mm/sec)
 //#define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 200}     //MR: the older A4988 stepper boards use {100, 100, 100, 460}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 100}     //MR: the older A4988 stepper boards use {100, 100, 100, 460}
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 43}      // (mm/sec)  MR: Changed from {200, 200, 200, 200}
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
