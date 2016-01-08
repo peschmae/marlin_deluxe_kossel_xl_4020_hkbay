@@ -391,7 +391,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 //#define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 200}    // (mm/sec)
 //#define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 100}     //MR: the older A4988 stepper boards use {100, 100, 100, 460}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {200, 200, 200, 200}     //MR: the older A4988 stepper boards use {100, 100, 100, 460}
 #define DEFAULT_MAX_FEEDRATE          {200, 200, 200, 43}      // (mm/sec)  MR: Changed from {200, 200, 200, 200}
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
