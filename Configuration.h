@@ -89,13 +89,13 @@
 
 //CALIB
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 206.0 // mm  //MR: changed from Mini:145.0 XL:199
+#define DELTA_SMOOTH_ROD_OFFSET 206.0 // mm  //MR: changed from Mini:145.0 XL:206
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 22.5 // mm  //MR: changed from Mini:19.9 XL:22.5
 
 // Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 14.0 // mm  //MR: changed from Mini:19.5 XL:20
+#define DELTA_CARRIAGE_OFFSET 20.0 // mm  //MR: changed from Mini:19.5 XL:20
 
 // Effective horizontal distance bridged by diagonal push rods.
 //#define DEFAULT_DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
