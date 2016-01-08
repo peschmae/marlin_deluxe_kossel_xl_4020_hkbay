@@ -105,10 +105,10 @@
 //#define DEBUG_MESSAGES
 
 // Precision for G30 delta autocalibration function
-#define AUTOCALIBRATION_PRECISION 0.03 // mm
-//#define AUTOCALIBRATION_PRECISION 0.06 // mm //do this first for quick test. If ok, change to 0.03 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//#define AUTOCALIBRATION_PRECISION 0.03 // mm
+#define AUTOCALIBRATION_PRECISION 0.06 // mm //do this first for quick test. If ok, change to 0.03 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 // Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.
-#define BED_DIAMETER 240 // mm, MR changed from 170
+#define BED_DIAMETER 255 // mm, MR changed from 170
 
 // Z-Probe variables
 // Start and end location values are used to deploy/retract the probe (will move from start to end and back again) 
