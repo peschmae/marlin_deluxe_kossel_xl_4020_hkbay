@@ -80,7 +80,7 @@
 #define DELTA
 
 // Make delta curves from many straight lines (linear interpolation).
-// This is a trade-off between visible corners (not enough segments)
+// This is a trade-off between visible corners (not enough segments)G30 A
 // and processor overload (too many expensive sqrt calls).
 #define DELTA_SEGMENTS_PER_SECOND 200
 
@@ -89,13 +89,13 @@
 
 //CALIB
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 206.0 // mm  //MR: changed from Mini:145.0 XL:206
+#define DELTA_SMOOTH_ROD_OFFSET 208.0 // mm  //MR: changed from Mini:145.0 XL:206
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 22.5 // mm  //MR: changed from Mini:19.9 XL:22.5
 
 // Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 20.0 // mm  //MR: changed from Mini:19.5 XL:20
+#define DELTA_CARRIAGE_OFFSET 13.0 // mm  //MR: changed from Mini:19.5 XL:20
 
 // Effective horizontal distance bridged by diagonal push rods.
 //#define DEFAULT_DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
@@ -106,18 +106,18 @@
 
 // Precision for G30 delta autocalibration function
 //#define AUTOCALIBRATION_PRECISION 0.03 // mm
-#define AUTOCALIBRATION_PRECISION 0.06 // mm //do this first for quick test. If ok, change to 0.03 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#define AUTOCALIBRATION_PRECISION 0.06 // mm //do this first for quick test. If ok, change to 0.03 <<<<
 // Diameter of print bed - this is used to set the distance that autocalibration probes the bed at.
-#define BED_DIAMETER 255 // mm, MR changed from 170
+#define BED_DIAMETER 240 // mm, MR changed from 170
 
 // Z-Probe variables
-// Start and end location values are used to deploy/retract the probe (will move from start to end and back again) 
+// Start and end location values are used to deploy/retract the probe (will move from start to end and back again)
 //original #define Z_PROBE_OFFSET {0, 10, -2.65, 0}  // X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe.
 //original #define Z_PROBE_DEPLOY_START_LOCATION {20, 96, 30, 0}   // X, Y, Z, E start location for z-probe deployment sequence
 //original #define Z_PROBE_DEPLOY_END_LOCATION {5, 96, 30, 0} // X, Y, Z, E end location for z-probe deployment sequence
 //original #define Z_PROBE_RETRACT_START_LOCATION {49, 84, 20, 0}  // X, Y, Z, E start location for z-probe retract sequence
-//original #define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}     // X, Y, Z, E end location for z-probe retract sequence 
-#define Z_PROBE_OFFSET {0, 16, -4.9, 0}  // X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//original #define Z_PROBE_RETRACT_END_LOCATION {49, 84, 1, 0}     // X, Y, Z, E end location for z-probe retract sequence
+#define Z_PROBE_OFFSET {-1.5, 17, -6, 0}  // X, Y, Z, E distance between hotend nozzle and deployed bed leveling probe. <<<<<<<<<< 6.7?
 #define Z_PROBE_DEPLOY_START_LOCATION {23, 159, 50, 0}   // X, Y, Z, E start location for z-probe deployment sequence, MR changed from {23, 93, 20, 0}
 #define Z_PROBE_DEPLOY_END_LOCATION {3, 159, 50, 0}// X, Y, Z, E end location for z-probe deployment sequence, MR changed from {5, 93, 20, 0}
 #define Z_PROBE_RETRACT_START_LOCATION {-45, 132, 33, 0}  // X, Y, Z, E start location for z-probe retract sequence, MR changed from {-24, 94, 46, 0}
@@ -147,7 +147,7 @@
 // 10 is 100k RS thermistor 198-961 (4.7k pullup)
 // 11 is 100k beta 3950 1% thermistor (4.7k pullup)
 // 12 is 100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup) (calibrated for Makibox hot bed)
-// 13 is 100k Hisens 3950  1% up to 300°C for hotend "Simple ONE " & "Hotend "All In ONE" 
+// 13 is 100k Hisens 3950  1% up to 300°C for hotend "Simple ONE " & "Hotend "All In ONE"
 // 20 is the PT100 circuit found in the Ultimainboard V2.x
 // 60 is 100k Maker's Tool Works Kapton Bed Thermistor beta=3950
 //
@@ -352,7 +352,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define Y_HOME_DIR 1
 #define Z_HOME_DIR 1
 
-#define min_software_endstops true // If true, axis won't move to coordinates less than HOME_POS.
+#define min_software_endstops false // If true, axis won't move to coordinates less than HOME_POS.
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // Travel limits after homing
@@ -377,7 +377,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_Y_HOME_POS 0
 //CALIB
 //#define MANUAL_Z_HOME_POS 280  // Start Calibration For delta: Distance between nozzle and print surface after homing.
-#define MANUAL_Z_HOME_POS 384.5  // For delta: Distance between nozzle and print surface after homing. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#define MANUAL_Z_HOME_POS 426.0  // For delta: Distance between nozzle and print surface after homing. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 //// MOVEMENT SETTINGS
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
