@@ -3,3 +3,5 @@ Firmware for Deluxe Kossel XL Assembly Kit from hkbay.com
 
 All code and further information about this printer can be found at: 
 https://www.dropbox.com/sh/sto13a753o39f1j/AAAbs86ZtBImWpkTeCedqhu3a?dl=0
+
+This Firmware version is based on https://github.com/RichCattell/Marlin
